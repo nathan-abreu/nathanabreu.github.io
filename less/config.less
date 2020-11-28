@@ -69,6 +69,10 @@
     src         : url('../fonts/EurostileLTStd.otf') format('opentype');
 }
 
+@fontOxanium: 'Oxanium', Helvetica, Arial, sans-serif;
+@fontOxaniumBold: 'Oxanium Bold', Helvetica, Arial, sans-serif;
+@fontEurostile: 'Eurostile LT Std', Helvetica, Arial, sans-serif;
+
 /* Backgrounds */
 
 .blue-bg {
@@ -83,7 +87,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family  : 'Oxanium Bold', Helvetica, Arial, sans-serif !important;
+    font-family  : @fontOxaniumBold !important;
     line-height  : 1.2em;
     margin-bottom: 15px;
 }
@@ -111,7 +115,7 @@ h4 {
 /* Texts */
 
 body * {
-    font-family: 'Eurostile LT Std', Helvetica, Arial, sans-serif;
+    font-family: @fontEurostile;
     line-height: 1.2em;
 }
 
@@ -137,14 +141,27 @@ dt {
     color: @colorTitleOnWhite3;
 }
 
-.blue-bg dt {
-    color: @colorTitleOnBlue2;
+dt span {
+    background: url("../img/caret_down.svg") 95% 5px no-repeat;
+    display: block;
+    font-family: @fontOxaniumBold;
+}
+
+dt.open {
+    color: @colorTitleOnBlue;
+    background: @gradientBlue;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+dt.open span {
+    background-image: url("../img/caret_up.svg");
 }
 
 /* Buttons */
 
 .button {
-    font-family  : 'Oxanium Bold', Helvetica, Arial, sans-serif !important;
+    font-family  : @fontOxaniumBold;
     display      : inline-block;
     background   : @gradientBlue;
     color        : @colorLinkOnBlue;
