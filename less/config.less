@@ -83,13 +83,18 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Oxanium Bold', Helvetica, Arial, sans-serif !important;
-    line-height: 1.2em;
+    font-family  : 'Oxanium Bold', Helvetica, Arial, sans-serif !important;
+    line-height  : 1.2em;
+    margin-bottom: 15px;
 }
 
 h2,
 h3 {
     color: @colorTitleOnWhite;
+}
+
+h2 {
+    font-size: 48px;
 }
 
 h4 {
@@ -117,7 +122,8 @@ body * {
 }
 
 .text {
-    color: @colorTextOnWhite;
+    color    : @colorTextOnWhite;
+    font-size: 18px;
 }
 
 /* Definition lists */
@@ -128,4 +134,15 @@ dt {
 
 .blue-bg dt {
     color: @colorTitleOnBlue2;
+}
+
+/* Buttons */
+
+.button {
+    display   : inline-block;
+    background: @gradientBlue;
+    color     : @colorLinkOnBlue;
+    padding   : 10px 20px;
+    border-radius: 30px;
+    white-space: nowrap;
 }
