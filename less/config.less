@@ -89,12 +89,12 @@ h6 {
 }
 
 h2 {
-    color: @colorTitleOnWhite;
+    color    : @colorTitleOnWhite;
     font-size: 48px;
 }
 
 h3 {
-    color: @colorTitleOnWhite;
+    color    : @colorTitleOnWhite;
     font-size: 36px;
 }
 
@@ -116,10 +116,6 @@ body * {
 
 .blue-bg * {
     color: @colorTextOnBlue;
-}
-
-.blue-bg a {
-    color: @colorLinkOnBlue;
 }
 
 .text {
@@ -149,13 +145,20 @@ dt {
     white-space  : nowrap;
 }
 
+.blue-bg a,
+.blue-bg a:hover,
+a.button:hover {
+    color: @colorLinkOnBlue;
+}
+
 /* Patterns */
 .image-container {
     position: relative;
 }
+
 .pattern {
     background-image: url("../img/Pattern.svg");
-    position: absolute;
-    min-width:237px;
-    min-height: 277px;
+    position        : absolute;
+    width       : 237px;
+    height      : 277px;
 }
