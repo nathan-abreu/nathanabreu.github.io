@@ -3,5 +3,60 @@
 @colorLinkOnBlue: #FFF;
 @colorTextOnBlue: #FFF;
 
-@colorTitleOnWhite: #0B2EE5;
+@colorTitleOnWhite : #0B2EE5;
 @colorTitleOnWhite2: #0CE3EF;
+@colorTitleOnWhite3: #0094D9;
+@colorTextOnWhite: #96969B;
+
+@colorTitleOnBlue: #FFF;
+@colorTitleOnBlue2: #CFFFFE;
+
+@gradientBlueDefinition: linear-gradient(90deg, @colorTitleOnWhite2 -47.15%, @colorTitleOnWhite 113.46%);
+@gradientGreenDefinition: linear-gradient(90deg, @colorTitleOnWhite2 -47.15%,  #0BE5B3 113.46%);
+@gradientBlueBox: linear-gradient(126.33deg, @colorTitleOnWhite2 -32.82%, @colorTitleOnWhite 125.49%);
+@gradientGreenBox: linear-gradient(126.33deg, @colorTitleOnWhite2 -32.82%, #0BE5B3 125.49%);
+@gradientContact: radial-gradient(95.16% 223.79% at -9.99% -74%, @colorTitleOnWhite 0.86%, @colorTitleOnWhite3 100%);
+
+/* Backgrounds */
+
+.blue-bg {
+    background-color: @colorBgBlue;
+}
+
+/* Titles */
+
+h2, h3 {
+    color: @colorTitleOnWhite;
+}
+
+h4 {
+    color: @colorTitleOnWhite2;
+}
+
+.blue-bg h5, .blue-bg h6 {
+    color: @colorTitleOnBlue2;
+}
+
+/* Texts */
+
+.blue-bg * {
+    color: @colorTextOnBlue;
+}
+
+.blue-bg a {
+    color: @colorLinkOnBlue;
+}
+
+.text {
+    color: @colorTextOnWhite;
+}
+
+/* Definition lists */
+
+dt {
+    color: @colorTitleOnWhite3;
+}
+
+.blue-bg dt {
+    color: @colorTitleOnBlue2;
+}
