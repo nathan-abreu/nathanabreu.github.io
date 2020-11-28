@@ -139,10 +139,22 @@ dt {
 /* Buttons */
 
 .button {
-    display   : inline-block;
-    background: @gradientBlue;
-    color     : @colorLinkOnBlue;
-    padding   : 10px 20px;
+    font-family  : 'Oxanium Bold', Helvetica, Arial, sans-serif !important;
+    display      : inline-block;
+    background   : @gradientBlue;
+    color        : @colorLinkOnBlue;
+    padding      : 10px 20px;
     border-radius: 30px;
-    white-space: nowrap;
+    white-space  : nowrap;
+}
+
+/* Patterns */
+.pattern-container {
+    position: relative;
+}
+.pattern {
+    background-image: url("../img/Pattern.svg");
+    position: absolute;
+    min-width:237px;
+    min-height: 277px;
 }
