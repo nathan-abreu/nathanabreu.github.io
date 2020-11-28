@@ -1,13 +1,22 @@
 header section {
+    background : @gradientBlue;
     padding-top: 38px;
 }
 
 h1 {
-    text-align: center;
-    width: 192px;
-    height: 52px;
-    text-indent: -9999px;
-    overflow: hidden;
-    margin: 0 auto;
+    text-align      : center;
+    width           : 192px;
+    height          : 52px;
+    text-indent     : -9999px;
+    overflow        : hidden;
+    margin          : 0 auto;
     background-image: url("../img/Logo_white.svg");
+}
+
+header nav a {
+    line-height: 40px;
+}
+
+header nav .row div:first-of-type a {
+    margin-left: 26px;
 }
