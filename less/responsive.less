@@ -1,8 +1,14 @@
 /* xl start */
 @media (min-width: 1200px) {}
 
-/* lg start */
-@media (min-width: 992px) {}
+/* until xl */
+@media (max-width: 1199px) {
+    #headline .main-image {
+        top: -40px;
+        left: 0;
+        width: 480px;
+    }
+}
 
 /* LG IS THE RESPONSIVE BREAKPOINT */
 /* until lg */
@@ -13,6 +19,10 @@
     // .container{
     //     width: 90%;
     // }
+
+    h2 {
+        font-size: 40px !important;
+    }
 
     /* Header */
     header {
@@ -114,15 +124,36 @@
 
 
     /* Headline */
+
+    /* Adjust body background a bit up */
+    body {
+        background-position: -370px -150px;
+    }
+
     #headline h2 {
         padding-top: 20px;
     }
 
     #headline .main-image {
-        width: 400px !important;
+        top: 120px;
+        left: 0;
+        width: 400px;
     }
 
     /* About Us */
+
+    #about-us .main-image-container{
+        left: 0;
+        margin-top: 60px;
+    }
+
+    #about-us h2 {
+        margin-top: 20px;
+    }
+
+    #about-us .text {
+        width: 100%
+    }
 
     #about-us .partners-container .palo-alto img {
         position: relative;
