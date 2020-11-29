@@ -1,12 +1,15 @@
-/* until sm */
-@media (max-width: 575px) {}
+/* xl start */
+@media (min-width: 1200px) {}
 
-/* until md */
-@media (max-width: 767px) {}
+/* lg start */
+@media (min-width: 992px) {}
 
 /* LG IS THE RESPONSIVE BREAKPOINT */
 /* until lg */
 @media (max-width: 991px) {
+
+    /* General */
+
     // .container{
     //     width: 90%;
     // }
@@ -33,9 +36,10 @@
 
     header .title-wrapper {
         width     : auto;
-        padding   : 0 10%;
+        padding   : 0;
         margin    : 0 auto;
         text-align: center;
+        white-space: nowrap;
     }
 
     header nav {
@@ -126,8 +130,19 @@
     }
 }
 
-/* lg start */
-@media (min-width: 992px) {}
+/* until md */
+@media (max-width: 767px) {}
 
-/* xl start */
-@media (min-width: 1200px) {}
+/* until sm */
+@media (max-width: 575px) {
+    header h1 {
+        width  : 200px;
+        height : 54px;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    header .hamburger {
+        width: 40px;
+    }
+}
