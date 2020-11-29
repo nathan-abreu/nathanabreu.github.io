@@ -197,9 +197,12 @@ dt.open span {
 dd {
     display      : none;
     padding      : 15px 30px;
-    margin-bottom: 20px;
     color        : @colorTextOnWhite;
     font-size    : 17px;
+}
+
+dd:not(:last-child) {
+    margin-bottom: 20px;
 }
 
 dd.open {
