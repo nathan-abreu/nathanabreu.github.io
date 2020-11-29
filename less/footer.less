@@ -1,26 +1,56 @@
-#contact ul>li {
-    display: inline;
-    margin-left: 20px;
-}
 
-.contact-bg {
+.contact-wrapper {
     background: @gradientContact;
+    border-radius: 10px;
+    margin: 50px;
+    padding-left: 135px;
+    padding-right: 135px;
+    overflow: hidden;
 }
 
 #contact h3 {
+    float: left; 
     padding-top: 20px;
+    text-align: center;
 }
 
 .contact-links {
-    margin-top: 30px;
+    float: right;
+    width: 340px;
+    margin-top: 10px;
 }
 
-.icons {
-    text-decoration: none;
+#contact ul>li {
+    display: inline-block;
+    margin-left: 30px;
+    height: 59px;
 }
 
-.whatsapp {
+#contact li>a {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-indent: -9999px;
+    overflow        : hidden;
+    margin          : 0 auto;
+    width: 50px;
+    height: 59px;
+}
+
+.whatsapp  a {
     background-image: url("../img/Footer_Whatsapp.svg");
+}
+
+.telegram  a {
+    background-image: url("../img/Footer_Telegram.svg");
+}
+
+.email  a {
+    background-image: url("../img/Footer_Email.svg");
+}
+
+.linkedin  a {
+    background-image: url("../img/Footer_Linkedin.svg");
 }
 
 footer img {
