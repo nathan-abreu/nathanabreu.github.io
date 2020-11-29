@@ -1,22 +1,23 @@
-@colorBg    : #FFF;
-@colorBgBlue: #0B2EE5;
+@colorBg   : #FFF;
+@colorBlue : #0B2EE5;
+@colorGreen: #0CE3EF;
 
 @colorLinkOnBlue: #FFF;
 @colorTextOnBlue: #FFF;
 
-@colorTitleOnWhite : #0B2EE5;
-@colorTitleOnWhite2: #0CE3EF;
+@colorTitleOnWhite : @colorBlue;
+@colorTitleOnWhite2: @colorGreen;
 @colorTitleOnWhite3: #0094D9;
 @colorTextOnWhite  : #96969B;
 
 @colorTitleOnBlue : #FFF;
 @colorTitleOnBlue2: #CFFFFE;
 
-@gradientBlue     : linear-gradient(90deg, @colorTitleOnWhite2 -47.15%, @colorTitleOnWhite 113.46%);
-@gradientGreen    : linear-gradient(90deg, @colorTitleOnWhite2 -47.15%, #0BE5B3 113.46%);
-@gradientBlueBox  : linear-gradient(126.33deg, @colorTitleOnWhite2 -32.82%, @colorTitleOnWhite 125.49%);
-@gradientGreenBox : linear-gradient(126.33deg, @colorTitleOnWhite2 -32.82%, #0BE5B3 125.49%);
-@gradientContact  : radial-gradient(95.16% 223.79% at -9.99% -74%, @colorTitleOnWhite 0.86%, @colorTitleOnWhite3 100%);
+@gradientBlue     : linear-gradient(90deg, @colorTitleOnWhite2 -47.15%, @colorTitleOnWhite 113.46%) no-repeat;
+@gradientGreen    : linear-gradient(90deg, @colorTitleOnWhite2 -47.15%, #0BE5B3 113.46%) no-repeat;
+@gradientBlueBox  : linear-gradient(126.33deg, @colorTitleOnWhite2 -32.82%, @colorTitleOnWhite 125.49%) no-repeat;
+@gradientGreenBox : linear-gradient(126.33deg, @colorTitleOnWhite2 -32.82%, #0BE5B3 125.49%) no-repeat;
+@gradientContact  : radial-gradient(95.16% 223.79% at -9.99% -74%, @colorTitleOnWhite 0.86%, @colorTitleOnWhite3 100%) no-repeat;
 
 /* Fonts */
 
@@ -70,14 +71,47 @@
     src         : url('../fonts/EurostileLTStd.otf') format('opentype');
 }
 
-@fontOxanium    : 'Oxanium', Helvetica, Arial, sans-serif;
+@fontOxanium : 'Oxanium',
+Helvetica,
+Arial,
+sans-serif;
 @fontOxaniumBold: 'Oxanium Bold', Helvetica, Arial, sans-serif;
-@fontEurostile  : 'Eurostile LT Std', Helvetica, Arial, sans-serif;
+@fontEurostile  : 'Eurostile LT Std',
+Helvetica,
+Arial,
+sans-serif;
 
 /* Backgrounds */
 
 .blue-bg {
-    background-color: @colorBgBlue;
+    background-color: @colorBlue;
+}
+
+/* Texts */
+
+body * {
+    font-family: @fontEurostile;
+    line-height: 1.2em;
+}
+
+.blue-bg * {
+    color: @colorTextOnBlue;
+}
+
+.text {
+    color    : @colorTextOnWhite;
+    font-size: 19px;
+}
+
+.bcrumb {
+    color        : @colorTextOnWhite;
+    font-size    : 13px;
+    margin-bottom: 16px;
+    display      : block;
+}
+
+.blue-bg .bcrumb {
+    color: @colorTextOnBlue
 }
 
 /* Titles */
@@ -104,8 +138,12 @@ h3 {
 }
 
 h4 {
-    color    : @colorTitleOnWhite2;
-    font-size: 36px;
+    color    : @colorTitleOnWhite2  !important;
+    font-size: 34px;
+}
+
+h5 {
+    font-size: 34px;
 }
 
 .blue-bg h5,
@@ -113,34 +151,11 @@ h4 {
     color: @colorTitleOnBlue2;
 }
 
-/* Texts */
-
-body * {
-    font-family: @fontEurostile;
-    line-height: 1.2em;
-}
-
-.blue-bg * {
-    color: @colorTextOnBlue;
-}
-
-.text {
-    color    : @colorTextOnWhite;
-    font-size: 19px;
-}
-
-.bcrumb {
-    color        : @colorTextOnWhite;
-    font-size    : 13px;
-    margin-bottom: 16px;
-    display      : block;
-}
-
 /* Definition lists */
 
 dt {
     color        : @colorTitleOnWhite3;
-    border       : 1px solid @colorBgBlue;
+    border       : 1px solid @colorBlue;
     border-radius: 6px;
 }
 
@@ -149,22 +164,33 @@ dt:not(:first-child) {
 }
 
 dt span {
-    padding    : 10px;
-    background : url("../img/caret_down.svg") 99% 15px no-repeat;
+    padding    : 10px 40px 10px 20px;
+    background : url("../img/caret_down.svg") right 20px top 15px no-repeat;
     display    : block;
     font-family: @fontOxaniumBold;
     cursor     : pointer;
 }
 
 dt.open {
-    color            : @colorTitleOnBlue;
-    border           : 1px solid @colorBg;
-    background       : @gradientBlue;
-    background-repeat: no-repeat;
+    color     : @colorTitleOnBlue;
+    border    : 1px solid @colorBg;
+    background: @gradientBlue;
 }
 
 dt.open span {
     background-image: url("../img/caret_up.svg");
+}
+
+.blue-bg dt {
+    border-color: @colorGreen
+}
+
+.blue-bg dt.open {
+    background: @gradientGreen;
+}
+
+.blue-bg dt.open span{
+    color     : @colorBlue;
 }
 
 dd {
