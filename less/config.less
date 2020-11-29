@@ -154,9 +154,10 @@ h5 {
 /* Definition lists */
 
 dt {
-    color        : @colorTitleOnWhite3;
-    border       : 1px solid @colorBlue;
-    border-radius: 6px;
+    color          : @colorTitleOnWhite3;
+    border         : 1px solid @colorBlue;
+    border-radius  : 6px;
+    background-clip: content-box;
 }
 
 dt:not(:first-child) {
@@ -189,8 +190,8 @@ dt.open span {
     background: @gradientGreen;
 }
 
-.blue-bg dt.open span{
-    color     : @colorBlue;
+.blue-bg dt.open span {
+    color: @colorBlue;
 }
 
 dd {
