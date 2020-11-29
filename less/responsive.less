@@ -1,15 +1,32 @@
-/* until sm */
-@media (max-width: 575px) {}
+/* xl start */
+@media (min-width: 1200px) {}
 
-/* until md */
-@media (max-width: 767px) {}
+/* until xl */
+@media (max-width: 1199px) {
+    #headline .main-image {
+        top  : -40px;
+        left : 0;
+        width: 480px;
+    }
+}
 
 /* LG IS THE RESPONSIVE BREAKPOINT */
 /* until lg */
 @media (max-width: 991px) {
+
+    /* General */
+
     // .container{
     //     width: 90%;
     // }
+
+    h2 {
+        font-size: 40px !important;
+    }
+
+    .text {
+        font-size: 20px;
+    }
 
     /* Header */
     header {
@@ -32,10 +49,11 @@
     }
 
     header .title-wrapper {
-        width     : auto;
-        padding   : 0 10%;
-        margin    : 0 auto;
-        text-align: center;
+        width      : auto;
+        padding    : 0;
+        margin     : 0 auto;
+        text-align : center;
+        white-space: nowrap;
     }
 
     header nav {
@@ -59,7 +77,7 @@
     }
 
     header nav.visible {
-        display   : block !important;
+        display   : flex !important;
         position  : fixed;
         top       : 0;
         left      : 0;
@@ -67,14 +85,35 @@
         height    : 100%;
         background: @gradientBlue;
         z-index   : 99;
+        padding   : 10% 0 0;
+    }
+
+    header nav .row {
+        display       : flex;
+        width         : 100%;
+        padding-bottom: 15%;
+        margin        : 0;
+    }
+
+    header nav .nav-link-wrapper,
+    header nav a {
+        display: block;
+        width  : 100%;
+        padding: 0;
     }
 
     header nav .close {
-        position: relative;
-        top     : 40px;
-        right   : 40px;
-        z-index : 100;
-        padding : 16px;
+        display   : flex;
+        position  : absolute;
+        bottom    : 40px;
+        width     : 100%;
+        text-align: center;
+    }
+
+    header nav .close span {
+        padding: 16px;
+        display: inline-block;
+        width  : 100%;
     }
 
     header nav .close:hover {
@@ -89,24 +128,314 @@
 
 
     /* Headline */
+
+    /* Adjust body background a bit up */
+    body {
+        background-position: -370px -150px;
+    }
+
     #headline h2 {
         padding-top: 20px;
     }
 
     #headline .main-image {
-        width: 400px !important;
+        top  : 120px;
+        left : 0;
+        width: 400px;
     }
 
     /* About Us */
+
+    #about-us .main-image-container {
+        left      : 0;
+        margin-top: 60px;
+    }
+
+    #about-us h2 {
+        margin-top: 20px;
+    }
+
+    #about-us .text {
+        width: 100%
+    }
 
     #about-us .partners-container .palo-alto img {
         position: relative;
         left    : 22px;
     }
+
+    /* Cyber Security */
+
+    #cyber-security .main-image-container img {
+        width : 468px;
+        height: 590px;
+    }
+
+    #cyber-security .text-icon {
+        flex-direction: column;
+    }
+
+    #cyber-security .text-icon img {
+        position: absolute;
+        top     : 20px;
+        left    : 28px;
+        width   : 104px !important;
+    }
+
+    #cyber-security .text-icon,
+    #cyber-security .text-container {
+        height: 600px;
+    }
+
+    #cyber-security .text-wrapper {
+        position: relative;
+        left    : -30px;
+        top     : 100px;
+    }
+
+    #cyber-security .text-container h2 {
+        margin-top: -200px;
+    }
+
+    #cyber-security .bg-icon {
+        top  : 40px;
+        right: -200px;
+    }
+
+    #security-integration {
+        padding-top        : 0;
+        margin-top         : -80px;
+        padding-bottom     : 490px;
+        background-position: center 100%;
+    }
+
+    #security-integration .pattern {
+        left: -240px;
+        top : 160px;
+    }
+
+    #security-integration .security-icon img {
+        left: -80px;
+        top : 20px;
+    }
+
+    /* Security Consulting */
+
+    #security-consulting {
+        padding-top   : 460px;
+        margin-top    : 120px;
+        padding-bottom: 200px;
+    }
+
+    #security-consulting .image-icon {
+        margin-top: 8px;
+    }
+
+    #security-consulting .main .main-image {
+        position: absolute;
+        top     : -680px;
+        left    : 20%;
+    }
+
+    #security-consulting .security-consulting-specs {
+        margin-top: 60px;
+    }
+
+    #security-consulting .architecture {
+        margin-top: 60px;
+    }
+
+    .security-consulting-icon {
+        top: 720px;
+    }
+
+    /* Managed Security */
+
+    #managed-security .pattern {
+        top: -50px;
+    }
+
+    #managed-security .section-icon-container img {
+        left: -70px;
+    }
+
+    #managed-security .image-container {
+        text-align: center;
+    }
+
+    /* Security Monitoring */
+
+    #security-monitoring .bg-image {
+        right: 20px;
+    }
+
+    /* Device Management */
+
+    #device-management .bg-icon {
+        right: -10px;
+    }
+
+    /* Video Security */
+
+    #video-security-main .image-container img {
+        width   : 126px;
+        position: relative;
+        top     : -100px;
+        left    : 27px;
+    }
+
+    /* Surveillance Solution */
+
+    #surveillance-solution-main {
+        padding-bottom: 700px;
+    }
+
+    #surveillance-solution-main .pattern-2 {
+        left: -420px;
+    }
+
+    #surveillance-solution-main .section-icon-container {
+        left: -74px;
+    }
+
+    #surveillance-solution-main .bg-icon {
+        top : 20px;
+        left: 0;
+    }
+
+    #surveillance-solution-main .main-image {
+        top : 180px;
+        left: 75px;
+    }
+
+    #surveillance-solution-boxes {
+        margin-top: 40px;
+    }
+
+    #surveillance-solution-boxes .box {
+        min-height    : auto;
+        padding-bottom: 40px;
+        margin-top    : 40px;
+    }
+
+    #surveillance-solution-boxes .box h6 {
+        font-size : 22px;
+        margin-top: 10px;
+    }
+
+    #surveillance-solution-boxes .box .text {
+        font-size: 22px;
+        opacity  : .85;
+    }
+
+    /* Video Monitoring */
+
+    #video-monitoring-services .section-icon-container img {
+        left    : -74px;
+        position: absolute;
+        top     : -70px;
+    }
+
+    #video-monitoring-services .text-container {
+        padding-top: 70px;
+    }
+
+    #video-monitoring-services p {
+        padding: 0
+    }
+
+    #video-monitoring-services .pattern-2 {
+        top: 180px;
+    }
+
+    #video-monitoring-services ul.first-list {
+        margin-left: 0;
+    }
+
+    #video-monitoring-services li {
+        font-size     : 20px;
+        padding-bottom: 2px;
+    }
+
+    /* Contact */
+
+    #contact {
+        min-width: 536px;
+        max-width: 100%;
+    }
+
+    #contact h3 {
+        font-size  : 28px;
+        padding-top: 24px;
+    }
+
+    .contact-wrapper {
+        padding     : 0 30px;
+        white-space : nowrap;
+        margin-left : 0;
+        margin-right: 0;
+    }
+
+    /* Footer */
+
+    .logo-container {
+        text-align: center;
+    }
+
+    .logo-container img {
+        display: inline;
+        margin-bottom: 10px;
+    }
+
+    footer p {
+        line-height: 1.2em;
+        font-size: 20px;
+        padding: 0 5% 15px;
+    }
+
+    footer .separator {
+        display: none;
+    }
+
+    footer span.email {
+        display: block;
+    }
+
+    .blue-wave {
+        background: @gradientBlue;
+    }
 }
 
-/* lg start */
-@media (min-width: 992px) {}
+/* until md */
+@media (max-width: 767px) {}
 
-/* xl start */
-@media (min-width: 1200px) {}
+/* until sm */
+@media (max-width: 575px) {
+    header h1 {
+        width      : 200px;
+        height     : 54px;
+        display    : inline-block;
+        white-space: nowrap;
+    }
+
+    header .hamburger {
+        width: 40px;
+    }
+
+    #about-us {
+        margin-top: 20px;
+    }
+
+    #about-us .main-image-container {
+        margin-top: 0;
+        min-height: 575px;
+    }
+
+    #about-us .main-image-container img {
+        top: -160px;
+    }
+
+    #about-us h2 {
+        margin-top: 0;
+    }
+}

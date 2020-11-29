@@ -13,16 +13,23 @@ function handleDefinitionLists() {
 function handleHamburgerMenu() {
     const header = document.querySelector("header");
     const navMenu = header.querySelector("nav");
+    const navLinks = header.querySelectorAll("a")
     const iconHamburger = header.querySelector(".hamburger");
-    const iconClose = header.querySelector(".close");
+    const iconClose = header.querySelector(".close span");
+
+    function closeNav() {
+        navMenu.classList.remove("visible");
+    }
 
     iconHamburger.addEventListener("click", () => {
         navMenu.classList.add("visible");
     });
 
-    iconClose.addEventListener("click", () => {
-        navMenu.classList.remove("visible");
-    })
+    iconClose.addEventListener("click", closeNav);
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", closeNav);
+    });
 }
 
 handleDefinitionLists();
