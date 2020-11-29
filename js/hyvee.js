@@ -15,7 +15,7 @@ function handleHamburgerMenu() {
     const navMenu = header.querySelector("nav");
     const navLinks = header.querySelectorAll("a")
     const iconHamburger = header.querySelector(".hamburger");
-    const iconClose = header.querySelector(".close");
+    const iconClose = header.querySelector(".close span");
 
     function closeNav() {
         navMenu.classList.remove("visible");

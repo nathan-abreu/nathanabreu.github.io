@@ -59,7 +59,7 @@
     }
 
     header nav.visible {
-        display   : block !important;
+        display   : flex !important;
         position  : fixed;
         top       : 0;
         left      : 0;
@@ -67,14 +67,35 @@
         height    : 100%;
         background: @gradientBlue;
         z-index   : 99;
+        padding   : 10% 0 0;
+    }
+
+    header nav .row {
+        display       : flex;
+        width         : 100%;
+        padding-bottom: 15%;
+        margin: 0;
+    }
+
+    header nav .nav-link-wrapper,
+    header nav a {
+        display: block;
+        width  : 100%;
+        padding: 0;
     }
 
     header nav .close {
-        position: relative;
-        top     : 40px;
-        right   : 40px;
-        z-index : 100;
-        padding : 16px;
+        display   : flex;
+        position  : absolute;
+        bottom    : 40px;
+        width     : 100%;
+        text-align: center;
+    }
+
+    header nav .close span {
+        padding: 16px;
+        display: inline-block;
+        width  : 100%;
     }
 
     header nav .close:hover {
