@@ -1,3 +1,4 @@
+@colorBg    : #FFF;
 @colorBgBlue: #0B2EE5;
 
 @colorLinkOnBlue: #FFF;
@@ -69,9 +70,9 @@
     src         : url('../fonts/EurostileLTStd.otf') format('opentype');
 }
 
-@fontOxanium: 'Oxanium', Helvetica, Arial, sans-serif;
+@fontOxanium    : 'Oxanium', Helvetica, Arial, sans-serif;
 @fontOxaniumBold: 'Oxanium Bold', Helvetica, Arial, sans-serif;
-@fontEurostile: 'Eurostile LT Std', Helvetica, Arial, sans-serif;
+@fontEurostile  : 'Eurostile LT Std', Helvetica, Arial, sans-serif;
 
 /* Backgrounds */
 
@@ -87,7 +88,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family  : @fontOxaniumBold !important;
+    font-family  : @fontOxaniumBold  !important;
     line-height  : 1.2em;
     margin-bottom: 15px;
 }
@@ -103,7 +104,7 @@ h3 {
 }
 
 h4 {
-    color: @colorTitleOnWhite2;
+    color    : @colorTitleOnWhite2;
     font-size: 36px;
 }
 
@@ -129,33 +130,53 @@ body * {
 }
 
 .bcrumb {
-    color: @colorTextOnWhite;
-    font-size: 13px;
+    color        : @colorTextOnWhite;
+    font-size    : 13px;
     margin-bottom: 16px;
-    display: block;
+    display      : block;
 }
 
 /* Definition lists */
 
 dt {
-    color: @colorTitleOnWhite3;
+    color        : @colorTitleOnWhite3;
+    border       : 1px solid @colorBgBlue;
+    border-radius: 6px;
+}
+
+dt:not(:first-child) {
+    margin-top: 20px;
 }
 
 dt span {
-    background: url("../img/caret_down.svg") 95% 5px no-repeat;
-    display: block;
+    padding    : 10px;
+    background : url("../img/caret_down.svg") 99% 15px no-repeat;
+    display    : block;
     font-family: @fontOxaniumBold;
+    cursor     : pointer;
 }
 
 dt.open {
-    color: @colorTitleOnBlue;
-    background: @gradientBlue;
-    border-radius: 6px;
-    padding: 10px;
+    color            : @colorTitleOnBlue;
+    border           : 1px solid @colorBg;
+    background       : @gradientBlue;
+    background-repeat: no-repeat;
 }
 
 dt.open span {
     background-image: url("../img/caret_up.svg");
+}
+
+dd {
+    display      : none;
+    padding      : 15px 30px;
+    margin-bottom: 20px;
+    color        : @colorTextOnWhite;
+    font-size    : 17px;
+}
+
+dd.open {
+    display: block;
 }
 
 /* Buttons */
@@ -184,6 +205,6 @@ a.button:hover {
 .pattern {
     background-image: url("../img/Pattern.svg");
     position        : absolute;
-    width       : 237px;
-    height      : 277px;
+    width           : 237px;
+    height          : 277px;
 }
