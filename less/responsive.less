@@ -1,48 +1,112 @@
-/* sm */
-@media (max-width: 576px){
+/* until sm */
+@media (max-width: 575px) {}
 
-}
+/* until md */
+@media (max-width: 767px) {}
 
-/* md */
-@media (max-width: 768px){
-    .container{
-        width: 90%;
-    }
+/* LG IS THE RESPONSIVE BREAKPOINT */
+/* until lg */
+@media (max-width: 991px) {
+    // .container{
+    //     width: 90%;
+    // }
 
     /* Header */
     header {
-        position:fixed;
-        width: 100%;
-        background: url("../img/Base-topo.svg") 0 0 no-repeat;
+        position      : fixed;
+        width         : 100%;
+        background    : url("../img/Base-topo.svg") 0 0 no-repeat;
         padding-bottom: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        z-index: 10;
+        box-shadow    : 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index       : 10;
     }
 
-    header .container{
+    header h1 {
+        width  : 270px;
+        height : 74px;
+        display: inline-block;
+    }
+
+    header .container {
         width: 100%;
+    }
+
+    header .title-wrapper {
+        width     : auto;
+        padding   : 0 10%;
+        margin    : 0 auto;
+        text-align: center;
     }
 
     header nav {
         padding-left: 50px;
     }
 
-    header nav a {
-        font-size: .85em
+    header nav .col {
+        width: 100%
     }
-}
 
-/* lg */
-@media (max-width: 992px){
+    header nav a {
+        display   : block;
+        text-align: center;
+        padding   : 20px 0;
+        font-size : 1.2em;
+    }
+
+    header nav .row div:first-of-type a {
+        margin-left: 0;
+        margin-top : 80px;
+    }
+
+    header nav.visible {
+        display   : block !important;
+        position  : fixed;
+        top       : 0;
+        left      : 0;
+        width     : 100%;
+        height    : 100%;
+        background: @gradientBlue;
+        z-index   : 99;
+    }
+
+    header nav .close {
+        position: relative;
+        top     : 40px;
+        right   : 40px;
+        z-index : 100;
+        padding : 16px;
+    }
+
+    header nav .close:hover {
+        color: inherit
+    }
+
+    header .hamburger {
+        margin-left   : 40px;
+        vertical-align: top;
+        margin-top    : 6px;
+    }
 
 
     /* Headline */
+    #headline h2 {
+        padding-top: 20px;
+    }
+
     #headline .main-image {
         width: 400px !important;
     }
+
+    /* About Us */
+
+    #about-us .partners-container .palo-alto img {
+        position: relative;
+        left    : 22px;
+    }
 }
 
-/* xl */
-@media (min-width: 992px){
+/* lg start */
+@media (min-width: 992px) {}
 
-}
+/* xl start */
+@media (min-width: 1200px) {}
