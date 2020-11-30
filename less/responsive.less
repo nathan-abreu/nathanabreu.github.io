@@ -8,6 +8,10 @@
         left : 0;
         width: 480px;
     }
+
+    #about-us .main-image-container img {
+        top: -90px;
+    }
 }
 
 /* LG IS THE RESPONSIVE BREAKPOINT */
@@ -30,12 +34,15 @@
 
     /* Header */
     header {
-        position      : fixed;
-        width         : 100%;
-        background    : url("../img/Base-topo.svg") 0 0 no-repeat;
+        position         : fixed;
+        width            : 100%;
+        // background    : url("../img/Base-topo.svg") 0 0 no-repeat;
+        box-shadow       : 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index          : 10;
+    }
+
+    header section {
         padding-bottom: 20px;
-        box-shadow    : 0 0 10px rgba(0, 0, 0, 0.5);
-        z-index       : 10;
     }
 
     header h1 {
@@ -73,7 +80,6 @@
 
     header nav .row div:first-of-type a {
         margin-left: 0;
-        margin-top : 80px;
     }
 
     header nav.visible {
@@ -134,14 +140,18 @@
         background-position: -370px -150px;
     }
 
+    #headline {
+        padding-bottom: 160px;
+    }
+
     #headline h2 {
         padding-top: 20px;
     }
 
     #headline .main-image {
         top  : 120px;
-        left : 0;
-        width: 400px;
+        left : -40px;
+        width: 360px;
     }
 
     /* About Us */
@@ -149,6 +159,11 @@
     #about-us .main-image-container {
         left      : 0;
         margin-top: 60px;
+        min-height: 990px;
+    }
+
+    #about-us .main-image-container img {
+        top: 50px;
     }
 
     #about-us h2 {
@@ -424,7 +439,25 @@
 }
 
 /* until md */
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+    #headline {
+        padding-bottom: 80px;
+    }
+
+    #about-us .main-image-container {
+        min-height: 770px;
+    }
+
+    #about-us .main-image-container img {
+        top: -50px;
+    }
+
+    #headline .main-image {
+        top  : 160px;
+        left : -40px;
+        width: 270px;
+    }
+}
 
 /* until sm */
 @media (max-width: 575px) {
@@ -439,6 +472,12 @@
         width: 40px;
     }
 
+    #headline .main-image {
+        top    : 160px;
+        left   : -80px;
+        opacity: .4;
+    }
+
     #about-us {
         margin-top: 20px;
     }
@@ -449,7 +488,7 @@
     }
 
     #about-us .main-image-container img {
-        top: -160px;
+        top: -90px;
     }
 
     #about-us h2 {
