@@ -196,7 +196,7 @@
 
     #cyber-security .text-icon img {
         position: absolute;
-        top     : 20px;
+        top     : -220px;
         left    : 28px;
         width   : 104px !important;
     }
@@ -444,6 +444,12 @@
         padding-bottom: 80px;
     }
 
+    #headline .main-image {
+        top  : 160px;
+        left : -40px;
+        width: 270px;
+    }
+
     #about-us .main-image-container {
         min-height: 770px;
     }
@@ -452,15 +458,20 @@
         top: -50px;
     }
 
-    #headline .main-image {
-        top  : 160px;
-        left : -40px;
-        width: 270px;
+    #cyber-security .main-image-container img {
+        width : 400px;
+        height: 505px;
+        left  : -225px;
     }
 }
 
 /* until sm */
 @media (max-width: 575px) {
+
+    html {
+        min-width: 360px;
+    }
+
     header h1 {
         width      : 200px;
         height     : 54px;
